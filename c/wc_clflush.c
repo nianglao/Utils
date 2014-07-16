@@ -56,6 +56,7 @@ void asm_sfence(void)
 #define BYTES_PER_LINE 8
 uint64_t addr[BYTES_PER_LINE];
 uint64_t val[BYTES_PER_LINE];
+uint64_t val_wb[BYTES_PER_LINE];
 
 int main()
 {
@@ -73,6 +74,7 @@ int main()
         addr[i] = (uint64_t)&(val[i]); 
         printf("addr[%d] = %lx\n", i, addr[i]);
         val[i] = i;
+        val_wb[i] = i;
     }
 
     /* Test for movnti */
@@ -88,16 +90,16 @@ int main()
     /* Test for clflush */
     gettimeofday(&start_time, NULL);
     for (j = 0; j < repeat; ++j){
-        val[0] = 0; 
-        val[1] = 0;
-        val[2] = 0;
-        val[3] = 0;
-        val[4] = 0;
-        val[5] = 0;
-        val[6] = 0;
-        val[7] = 0;
+        val_wb[0] = 0; 
+        val_wb[1] = 0;
+        val_wb[2] = 0;
+        val_wb[3] = 0;
+        val_wb[4] = 0;
+        val_wb[5] = 0;
+        val_wb[6] = 0;
+        val_wb[7] = 0;
         // asm_wb_write_block64(addr, val); //slower than directly write to the val[]
-        asm_clflush(val);
+        asm_clflush(val_wb);
         asm_mfence();
     } 
     gettimeofday(&stop_time, NULL);
@@ -107,14 +109,14 @@ int main()
     /* Test for loop_time */
     gettimeofday(&start_time, NULL);
     for (j = 0; j < repeat; ++j){
-        val[0] = 0; 
-        val[1] = 0;
-        val[2] = 0;
-        val[3] = 0;
-        val[4] = 0;
-        val[5] = 0;
-        val[6] = 0;
-        val[7] = 0;
+        val_wb[0] = 0; 
+        val_wb[1] = 0;
+        val_wb[2] = 0;
+        val_wb[3] = 0;
+        val_wb[4] = 0;
+        val_wb[5] = 0;
+        val_wb[6] = 0;
+        val_wb[7] = 0;
     } 
     gettimeofday(&stop_time, NULL);
     loop_time = (stop_time.tv_sec - start_time.tv_sec)
