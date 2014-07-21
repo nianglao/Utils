@@ -5,7 +5,15 @@
  *
  * Notice:
  *    It seems that we can use "asm" instead of "__asm__",
- *    and use "volatile" instead of "__volatile__" 
+ *    and use "volatile" instead of "__volatile__", 
+ *    because these are alias.
+ *
+ *    asm : asm允许你在你的代码中直接插入汇编语言指令
+ *    volatile: 关键字volatile在描述变量时使用,阻止编
+ *    译器优化那些以valatile修饰的变量,volatile被用在
+ *    一些变量能被意外方式改变的地方,例如:抛出中断,这
+ *    些变量若无volatile可能会和编译器执行的优化相冲突.
+ *
  * */
 
 #include <stdint.h> 
