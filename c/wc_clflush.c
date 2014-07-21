@@ -2,6 +2,10 @@
  * 
  * Compile:
  *    gcc -o test wc_clflush.c  
+ *
+ * Notice:
+ *    It seems that we can use "asm" instead of "__asm__",
+ *    and use "volatile" instead of "__volatile__" 
  * */
 
 #include <stdint.h> 
