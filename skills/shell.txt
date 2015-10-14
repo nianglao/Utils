@@ -1,0 +1,12 @@
+ctrl + R : 
+    search command
+
+ctrl + A :
+    jump ahead of the command line
+
+ctrl + E :
+    jump end of the command line
+
+find ./ -name filename
+    find file by filename
+    
