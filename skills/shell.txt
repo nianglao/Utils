@@ -9,4 +9,13 @@ ctrl + E :
 
 find ./ -name filename
     find file by filename
+
+{ time ls;} 2>&1 | tee output.txt
+    command line redirect time info. To be noted, there is a blank between '{' and 'time'
     
+netstat -nlat 
+    lookup all port for linux. 
+    -a, show the state of all sockets
+    -l, Print full IPv6 address
+    -n, Show network addresses as numbers
+    -t, --tcp
