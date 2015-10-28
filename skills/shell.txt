@@ -19,3 +19,7 @@ netstat -nlat
     -l, Print full IPv6 address
     -n, Show network addresses as numbers
     -t, --tcp
+
+vim
+    :n  next file, when vim multiple files
+    :N  previous file, when vim multiple files
