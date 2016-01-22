@@ -23,6 +23,8 @@ tail_lines=`expr $new_lines - $last_lines`
 if [ $tail_lines != 0 ];
 then
     eval "$CMD $PARAM $LOG_FILE | tail -n $tail_lines > $DELTA_LOG"
+    echo "Delta log stored in $DELTA_LOG"
+else
+    echo "Nothing changed"
 fi
 
-echo "Delta log stored in $DELTA_LOG"
