@@ -1,0 +1,2 @@
+Column selection:
+	Left Mouse + Option
