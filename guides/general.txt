@@ -1,0 +1,7 @@
+PreCheck:
+	Design module friendly to do unit test.	
+
+PostCheck:
+	Check "if"/"switch" clause, if cover all cases
+	Use fixed memory as far as possible
+

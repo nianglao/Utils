@@ -1,0 +1,4 @@
+PostCheck:
+	Design module or function friendly to do unit test
+	Make project and test successfully before check in codes
+	When using "make", using fixed capacity for performance
