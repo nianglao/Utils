@@ -23,3 +23,6 @@ netstat -nlat
 vim
     :n  next file, when vim multiple files
     :N  previous file, when vim multiple files
+
+echo $?
+	access the last return value in bash
