@@ -24,11 +24,12 @@ help_info = '''[1] 全部菜单
 print help_info
 scale = raw_input()
 
-if scale == 1 :
+print scale
+if scale == '1' :
     menu = menu_all
-elif scale == 2 :
+elif scale == '2' :
     menu = menu_small
-elif scale == 3 :
+elif scale == '3' :
     menu = menu_big
 else:
     menu = menu_all
