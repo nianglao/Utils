@@ -1,0 +1,8 @@
+svn info filename
+    show svn info for percific file
+
+svn revert filename
+    revert filename to the latest commit reversion
+
+svn diff filename 
+    diff between the latest revision with working copy
