@@ -1,9 +1,0 @@
-Column Edit:
-	First 
-		Ctrl + V
-	to select columns, then 
-		Shift + i
-	to edit first line, then
-		Esc
-	to apply to all selected lines
-

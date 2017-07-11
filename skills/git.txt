@@ -1,5 +1,0 @@
-git push with name and passwd:
-	First use 
-		git remote -v
-	to get remote URL. Then 
-		git push https://username:passwd@github.com/nianglao/Utils.git --all
