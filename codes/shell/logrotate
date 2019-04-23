@@ -1,0 +1,5 @@
+# https://nianglao.github.io/misc/2018/04/23/logrotate-notes.html
+
+# logrotate is always triggered by anacron with /etc/cron.daily/logrotate. Logrotate default config is /etc/logrotate.conf. In default config, include /etc/logrotate.d means all config under /etc/logrotate.d will be included.
+
+# Logrotate will rotate logs according to configuration and refering to log file status in /var/lib/logrotate/logrotate.status. The first time logrotate runs, it will init log file status in /var/lib/logrotate/logrotate.status.

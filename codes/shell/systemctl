@@ -1,0 +1,24 @@
+# create a foo.service
+# put foo.service into /etc/systemd/system/
+# systemctl enable foo.service
+# systemctl start|stop|restart foo
+
+# example foo.service
+
+[Unit]
+Description=Example Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/somepath/binary -f config.file
+ExecReload=/bin/kill -HUP $MAINPID
+WorkingDirectory=
+KillMode=process
+User=foo
+Group=bar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
