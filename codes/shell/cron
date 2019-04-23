@@ -10,7 +10,7 @@
 # crontab -l //查看所有crontab 列表
 # log: cat /var/log/cron.log
 
-# 29 18 * * * /Users/lsun/presto-cli/python-cli-2/cron.sh
+# 29 18 * * * /Users/presto-cli/python-cli-2/cron.sh
 
 # There are two kinds of cron job: cron and anacron on Linux.
 # anacron run with a frequency specified in days. It’s configuration under /etc/anacrontab. Cron jobs under /etc/cron.daily, /etc/cron.weekly, /etc/cron.monthly are triggered by anacron. START_HOURS_RANGE defines the anacron start time period.
