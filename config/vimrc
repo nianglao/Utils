@@ -75,7 +75,6 @@ set hlsearch
 " 按下F5重新生成tag文件，并更新taglist
 map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 imap <F5> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
-set tags=/Users/lsun/Workdir/freewheel/
 set tags+=./tags "add current directory's generated tags file
 
 "--taglist setting--
