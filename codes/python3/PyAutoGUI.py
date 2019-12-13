@@ -17,7 +17,7 @@ def next_page():
 
 
 total = 1
-output_dir = 'screenshots'
+output_dir = '.'
 for i in range(total):
     print('screen shot on page %d' % (i + 1))
     pic_name = '%s/%s.png' % (output_dir, i + 1)
